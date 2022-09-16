@@ -1,0 +1,1020 @@
+/* Clases Genericas */
+
+.ocultarElemento {
+    visibility: hidden;
+}
+
+/* Clases Documento */
+
+body {
+
+    min-width: 1224px;
+    max-width: 1590px;
+    width: 100%;
+    height: 100%;
+
+    background: #F3F5FC;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.logoAlura {
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 2.777777777777778%;
+    top: 3.90625%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+}
+
+.cajaEncriptacion {
+    
+    position: absolute;
+    width: 40.06944444444444%;
+    height: 4.6875%;
+    left: 16.66666666666667%;
+    top: 16.40625%;
+    padding-bottom: 25%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+    color: #0A3871;
+    background: #F3F5FC;
+    resize: none;
+    border: none;
+    overflow: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.cajaEncriptacion::placeholder {
+    color: #0A3871;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 47.22222222222222%;
+    height: 6.54296875%;
+    left: 16.66666666666667%;
+    top: 86.42578125%;
+
+}
+
+.botonEncriptar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: 6.54296875%;
+
+    background: #0A3871;
+    border-radius: 24px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    width: auto;
+    height: 1.85546875%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.botonDesencriptar {
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+
+    width: auto;
+    height: 6.54296875%;
+
+    background-color: #F3F5FC;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    width: auto;
+    height: 1.85546875%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #0A3871;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.advertenciaCaracteres{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: auto;
+    height: 1.7578125%;
+    left: 17.66666666666667%;
+    top: 83.10546875%;
+}
+
+.advertenciaIcono{
+    width: auto;
+    height: auto;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.advertenciaTexto{
+    width: auto;
+    height: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 150%;
+}
+
+#rectangulo {
+    position: absolute;
+    width: 27.77777777777778%;
+    height: 92.1875%;
+    left: 69.44444444444444%;
+    top: 3.90625%;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    }
+
+.textoEncriptado {
+    position: absolute;
+    width: 23.33333333333333%;
+    height: 76.26953125%;
+    left: 71.66666666666667%;
+    top: 7.03125%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+
+.textoEncriptado:hover {
+    cursor: auto;
+}
+
+.botonEncriptar, .botonDesencriptar, .botonCopiar {
+    cursor: pointer;
+}
+
+
+.botonCopiar {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 23.33333333333333%;
+    height: 6.54296875%;
+    left: 73.4%;
+    top: 86.42578125%;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    
+    color: #0A3871;
+
+    width: 20%;
+    height: 1.85546875%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 19px;
+    text-align: center;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.rectVacio {
+    display: block;
+}
+
+.munheco {
+    position: absolute;
+    width: 23.33333333333333%;
+    height: 29.6875%;
+    left: 71.66666666666667%;
+    top: 27.63671875%;
+
+}
+
+.logTextos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    position: absolute;
+    width: 23.33333333333333%;
+    height: 11.9140625%;
+    left: 71.66666666666667%;
+    top: 60.44921875%;
+}
+
+.logTitulo {
+    width: auto;
+    height: auto;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #343A40;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.logTextoSecundario {
+    width: auto;
+    height: 4.6875%;
+    top: 7.2265625%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 150%;
+
+    text-align: center;
+
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1224px) and (max-width: 1590px) {
+    
+    body {
+        
+        min-width: 1224px;
+        max-width: 1590px;
+        min-height: 768px;
+        width: 100%;
+        height: 100%;
+
+        background: #F3F5FC;
+        position: relative;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .logoAlura {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 40px;
+
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: 2.777777777777778%;
+        top: 3.90625%;
+    }
+
+    .cajaEncriptacion {
+        
+        position: absolute;
+        width: 40.06944444444444%;
+        height: 4.6875%;
+        left: 16.66666666666667%;
+        top: 16.40625%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 150%;
+        color: #0A3871;
+
+    }
+
+    .cajaEncriptacion::placeholder {
+        color: #0A3871;
+    }
+
+    .textoEncriptado:hover {
+        cursor: auto;
+    }
+
+    .botonEncriptar, .botonDesencriptar, .botonCopiar {
+        cursor: pointer;
+    }
+
+    .munheco {
+        
+        position: absolute;
+        width: 23.33333333333333%;
+        height: auto;
+        left: 71.66666666666667%;
+        top: 27.63671875%;
+
+    }
+
+    .logTextos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+
+        position: absolute;
+        width: 23.33333333333333%;
+        height: auto;
+        left: 71.66666666666667%;
+        top: 68.44921875%;
+    }
+
+    .logTitulo {
+        
+        width: auto;
+        height: 5.6640625%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5em;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .logTextoSecundario {
+        
+        width: auto;
+        height: 4.6875%;
+        font-family: 'Inter';
+        top: 7.2265625%;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #495057;
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+} 
+/* Tablets */ 
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+
+    body {
+        width: 100%;
+        height: 100%;
+        max-width: 1023px;
+        min-width: 481px;
+
+        overflow-x: hidden;
+    }
+    .logoAlura {
+        
+        position: absolute;
+        width: auto;
+        height: 50.58px;
+        top: 73.42px;
+        margin-bottom: 5%;
+
+    }
+
+    .cajaEncriptacion {
+        
+        height: 48px;
+        width: 80%;
+        left: 4.651162790697674%;
+        top: 330px;
+        border-radius: nullpx;
+    }
+
+    .advertenciaCaracteres {
+       
+        height: 18px;
+        width: 229px;
+        left: 40px;
+        top: 926px;
+        border-radius: 0px;
+
+    }
+
+    .botones {
+       
+        width: 90%;
+        height: 67px;
+        left: 3.910068426197458%;
+        top: 960px;
+        border-radius: 0px;
+        padding: 3% 0px;
+
+    }
+
+    .botonEncriptar {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+
+        width: auto;
+        height: 67px;
+
+        background: #0A3871;
+        border-radius: 24px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+    }
+
+    .botonDesencriptar {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 8px;
+
+        width: auto;
+        height: 67px;
+
+
+        color: #0A3871;
+        background-color: #F3F5FC;
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+    }
+
+   #rectangulo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+    
+
+    position: absolute;
+    width: 80%;
+    height: 133px;
+    left: 4.651162790697674%;
+    top: 1091px;
+
+    
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+   }
+
+   .rectConDatos {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+
+    position: absolute;
+    width: 80%;
+    height: 343px;
+    left: 4.651162790697674%;
+    top: 1091px;
+
+    background: #FFFFFF;
+ 
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+   }
+
+   .textoEncriptado {
+    
+    width: 72.55813953488372%;
+    height: 180px;
+    left: 3.72093023255814%;
+    top: 32px;
+    border-radius: nullpx;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+
+    color: #495057;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+   }
+
+
+   .botonCopiar {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px 40%;
+    gap: 8px;
+
+    width: 72.55813953488372%;
+    height: 67px;
+    left: 10%;
+    top: 303px;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+   }
+
+   .rectVacio {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+    
+    position: absolute;
+    width: 82%;
+    height: 133px;
+    left: 4.651162790697674%;
+    top: 1091px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+
+   }
+
+   
+   .munheco {
+        visibility: hidden;
+    }
+
+
+   .logTextos {
+
+       
+    width: 72.55813953488372%;
+    height: 69px;
+    left: 22.72093023255814%;
+    top: 50px;
+    border-radius: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+   }
+
+   .logTitulo{
+
+    /* Ningún mensaje fue encontrado */
+
+    width: 72.55813953488372%;
+    height: auto;
+    position: relative;
+    display: block;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #343A40;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+   }
+
+   .logTextoSecundario{
+        
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+
+    width: 72.55813953488372%;
+    height: auto;
+    position: relative;
+    display: block;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    text-align: center;
+
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+   }
+
+}   
+
+/* Celulares */
+
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
+
+
+    
+    body {
+        width: 100%;
+        max-width: 480px;
+        min-width: 300px;
+        overflow-x: hidden;
+    }
+
+    .logoAlura {
+
+        height: auto;
+        width: auto;
+        left: 0px;
+        top: 24px;
+        border-radius: 0px;
+        margin-left: 0px;
+
+    }
+    
+    .cajaEncriptacion {
+        position: absolute;
+        width: 71.45833333333333%;
+        height: 48px;
+        left: 10.333333333333333%;
+        top: 152px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+    }
+    
+    .botones {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+        position: absolute;
+        width: 71.45833333333333%;
+        height: 158px;
+        left: 8%;
+        top: 515px;
+    }
+
+    .botonEncriptar {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px 58%;
+        gap: 8px;
+
+        width: auto;
+        height: 67px;
+
+        background: #0A3871;
+        border-radius: 24px;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .botonDesencriptar {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px 58%;
+        gap: 8px;
+
+        width: auto;
+        height: 67px;
+        left: 8%;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        background-color: #F3F5FC;
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .advertenciaCaracteres {
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+
+        position: absolute;
+        width: 47.70833333333333%;
+        height: 18px;
+        left: 3.333333333333333%;
+        top: 451px;
+
+    }
+
+    .advertenciaIcono {
+        width: 3.333333333333333%;
+        height: 16px;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .advertenciaTexto {
+        width: 42.70833333333333%;
+        height: 18px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+
+        color: #495057;
+
+        flex: content;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .rectConDatos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+
+        position: absolute;
+        width: 68.125%;
+        height: 595px;
+        left: 8%;
+        top: 707px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .textoEncriptado {
+        width: 58.125%;
+        height: 445px;
+        top: 32px;
+        left: 6.666666666666667%;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+ 
+        color: #495057;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .botonCopiar {
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 24px 38%;
+        gap: 8px;
+
+        width: auto;
+        height: 67px;
+        top: 550px;
+        left: 4.166666666666667%;
+
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .rectVacio, #rectangulo {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+
+        position: absolute;
+        width: 68.125%;
+        height: 186px;
+        left: 8%;
+        top: 707px;
+        
+
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .munheco {
+        visibility: hidden;
+    }
+
+    .logTextos {
+        
+       
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+        
+        width: 54.79166666666667%;
+        height: 122px;
+        left: 22.33333333334%;
+        top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .logTitulo {
+
+        width: auto;
+        height: auto;
+        left: 6.666666666666667%;
+        top: 32px;
+        border-radius: 0px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+
+        text-align: center;
+        color: #343A40;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+    .logTextoSecundario {
+
+        width: auto;
+        height: auto;
+        top: 74px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+
+        text-align: center;
+
+        color: #495057;
+
+        flex: none;
+        order: 1;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+
+
+}

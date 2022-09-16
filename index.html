@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <link rel="icon" href="Imagenes/Favicon.jpg">
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="todo">
+
+            <header>
+                <h1><img class="logoAlura" src="imagenes/Logo.png" alt="Logo_Alura"></h1>
+            </header>
+            
+            <main>
+
+                <fieldset class="areaDeEncriptacion">
+
+                    <textarea class="cajaEncriptacion" placeholder="Ingrese el texto aqui"></textarea>
+
+                    <div class="botones">
+        
+                        <button class="botonEncriptar">Encriptar</button>
+                        <button class="botonDesencriptar">Desencriptar</button>
+        
+                    </div>
+
+                    <div class="advertenciaCaracteres">
+
+                        <legend class="advertenciaIcono">&#xF332;</legend>
+                        <legend class="advertenciaTexto"> Solo letras minúsculas y sin acentos</legend>
+
+                    </div>
+                </fieldset>
+
+                
+                <div class="logDeEncriptaciones">
+                    
+                    <rect id="rectangulo"></rect>
+                    
+                    <div class="rectConDatos">
+                        <textarea readonly class="textoEncriptado"></textarea>
+                        <button class="botonCopiar" type="button">Copiar</button>
+                    </div>
+
+                    <div class="rectVacio">
+
+                        <img class="munheco" src="imagenes/Muñeco.png" alt="Texto No Encontrado">
+                        
+                        <div class="logTextos">
+                            <p class="logTitulo">Ningún mensaje fue encontrado</p>
+                            <p class="logTextoSecundario">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+    
+</html>
+
+
+<script>
+
+    // Variables
+
+    var cajaEncriptacion = document.querySelector (".cajaEncriptacion");      
+    var rectVacio = document.querySelector(".rectVacio");
+    var rectConDatos = document.querySelector(".rectConDatos");
+    var botonEncriptar = document.querySelector(".botonEncriptar");
+    var botonDesencriptar = document.querySelector(".botonDesencriptar");
+    var textareaTraducciones = document.querySelector(".textoEncriptado");
+    var botonCopiar = document.querySelector(".botonCopiar");
+    var ocultarInicial = rectConDatos.className = "ocultarElemento";;
+
+    // Declaraciones
+
+    botonCopiar.addEventListener("click",copiar);
+
+    // Funciones
+
+    function esconderYMostrarElementos () {
+
+        if (textareaTraducciones !== ""){
+            rectVacio.className = "ocultarElemento";
+            
+        }
+    }
+
+    function limpiarCajaEncriptacion () {
+        cajaEncriptacion.value = "";
+    }
+
+    function copiar () {
+        textareaTraducciones.select();
+        document.execCommand("copy");
+    }
+
+
+    function encriptar () {
+
+        if (cajaEncriptacion.value !== "") {
+            
+            const vocalesAcentuadas = {"á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u",}
+            const vocalesEncriptadas = {"a":"ai", "e":"enter", "i":"imes", "o":"ober", "u":"ufat"};
+            var textoEncriptar = cajaEncriptacion.value.toLowerCase();
+            textoEncriptar = textoEncriptar.replace(/[áéíóú]/g, m => vocalesAcentuadas[m])
+            textoEncriptar = textoEncriptar.replace (/[^a-zA-Z ]/g, m => "");
+            textoEncriptar = textoEncriptar.replace (/[aeiou]/g, m => vocalesEncriptadas[m]);
+            textareaTraducciones.value = textoEncriptar;
+            ocultarInicial = rectConDatos.className = "rectConDatos";
+            esconderYMostrarElementos ();
+            limpiarCajaEncriptacion ();
+        }
+    }
+
+    function desencriptar () {
+
+        if (cajaEncriptacion.value !== "") {
+
+            const vocalesAcentuadas = {"á":"a", "é":"e", "í":"i", "ó":"o", "ú":"u",}
+            var textoDesencriptar = cajaEncriptacion.value.toLowerCase();
+            textoDesencriptar = textoDesencriptar.replace(/[áéíóú]/g, m => vocalesAcentuadas[m])
+            textoDesencriptar = textoDesencriptar.replace (/[^a-zA-Z ]/g, m => "");
+            textoDesencriptar = textoDesencriptar.split("ai").join("a");
+            textoDesencriptar = textoDesencriptar.split("enter").join("e");
+            textoDesencriptar = textoDesencriptar.split("imes").join("i");
+            textoDesencriptar = textoDesencriptar.split("ober").join("o");
+            textoDesencriptar = textoDesencriptar.split("ufat").join("u");
+
+            textareaTraducciones.value = textoDesencriptar;
+            ocultarInicial = rectConDatos.className = "rectConDatos";
+            esconderYMostrarElementos ();
+            limpiarCajaEncriptacion ();
+        }
+    }
+    
+    function botonEncriptarClickeado () {
+        encriptar();
+    }
+
+    function botonDesencriptarClickeado () {
+        desencriptar();
+
+    }
+    
+    // Acciones
+    
+    botonEncriptar.onclick = botonEncriptarClickeado;
+    botonDesencriptar.onclick = botonDesencriptarClickeado;
+    cajaEncriptacion.focus();
+
+</script>
